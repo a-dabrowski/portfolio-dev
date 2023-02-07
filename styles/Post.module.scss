@@ -1,0 +1,89 @@
+$base-value: 0.5rem;
+$line-height-title: 1.2;
+$line-height-standard: 1.6;
+$line-height-heading: 1;
+
+$color-light-white: #f9fafb;
+
+.post {
+  margin: $base-value * 2;
+
+  ::selection {
+    color: white;
+    background-color: black;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: red;
+    line-height: $line-height-title;
+  }
+
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 900;
+    line-height: $line-height-title;
+    margin-bottom: $base-value * 8;
+  }
+  h2 {
+    font-size: 4rem;
+    line-height: $line-height-heading;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+  }
+  h5 {
+    font-size: 1.5rem;
+  }
+  h6 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin: $base-value * 2 0 $base-value * 4;
+    line-height: $line-height-standard;
+  }
+
+  q {
+  }
+  a {
+    border-bottom: $base-value * 0.25 solid black;
+  }
+
+  blockquote {
+    background-color: gray;
+    font-style: italic;
+    padding: $base-value * 2;
+    border-radius: $base-value;
+
+    p {
+      margin: $base-value;
+    }
+  }
+
+  code {
+    font: monospace;
+  }
+
+  pre {
+    background-color: gray;
+    padding: $base-value * 2;
+    border-radius: $base-value;
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol {
+    list-style-type: decimal;
+  }
+}
