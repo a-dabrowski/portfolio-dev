@@ -1,33 +1,26 @@
-import React, { useState } from "react";
-import { Menu, MenuContainer, MenuItem } from "./CurtainMenu";
+import React from "react";
+import Link from "next/link";
 
 export default function Header() {
-  const [isMenuOpen, setMenuOpen] = useState(false);
 
   const AUTHOR = "Adam Dąbrowski";
-  //return <h1>HEADER PLACEHOLDER{AUTHOR}</h1>;
   return (
     <>
-      <Menu open={isMenuOpen} transition="top">
-        <button
-          className="absolute top-3 right-3 text-gray-400 hover:text-white"
-          onClick={() => setMenuOpen(false)}
-        >
-          Close
-        </button>
-        <MenuContainer>
-          <MenuItem href="/">Homepage</MenuItem>
-          <MenuItem href="/photography/offer">Photography Services</MenuItem>
-          <MenuItem href="/photography">Photography Portfolio</MenuItem>
-          <MenuItem href="/">About Me</MenuItem>
-        </MenuContainer>
-      </Menu>
-      <header>
-        <h2>{AUTHOR}</h2>
-        <button className="uppercase" onClick={() => setMenuOpen(true)}>
-          Menu
-        </button>
-      </header>
+      <div className="mb-4 bg-black sticky top-0">
+        <header className="max-w-3xl m-auto flex flex-row justify-between items-center p-4 text-white">
+            <Link className="block text-3xl hover:underline" href="/">
+              {AUTHOR}
+            </Link>
+          <div className="flex flex-row">
+            <Link className="block ml-2 hover:underline" href="/">
+              Blog
+            </Link>
+            <Link className="block ml-2 hover:underline" href="/about">
+              About
+            </Link>
+          </div>
+        </header>
+      </div>
     </>
   );
 }
