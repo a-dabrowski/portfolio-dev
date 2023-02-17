@@ -66,8 +66,8 @@ const Post = ({ post }: Props) => {
         ) : (
           <>
             <Header />
-            <article className="mb-32 max-w-2xl m-auto">
-              <p>{postDateFormatted}</p>
+            <article className="mb-32 max-w-3xl m-auto">
+              <p className="m-4 text-sm font-thin">{postDateFormatted}</p>
               <div
                 className={postStyles.post}
                 dangerouslySetInnerHTML={{ __html: post.content }}

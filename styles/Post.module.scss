@@ -3,14 +3,22 @@ $line-height-title: 1.2;
 $line-height-standard: 1.6;
 $line-height-heading: 1;
 
-$color-light-white: #f9fafb;
+$color-accent: #eccc8f;
+$color-text-accent: #4a5568;
+$color-text-primary: #1b1b1b;
+$color-text-secondary: #4e4e4e;
+$color-background-dark: #210440;
+$color-background-light: #fefefe;
+$color-text-light: #fdfdfd;
+$color-bright-brick: #ee7828;
+$color-graphite: #2c2c2c;
 
 .post {
   margin: $base-value * 2;
 
   ::selection {
-    color: white;
-    background-color: black;
+    color: $color-text-light;
+    background-color: $color-graphite;
   }
 
   h1,
@@ -19,26 +27,29 @@ $color-light-white: #f9fafb;
   h4,
   h5,
   h6 {
-    color: red;
+    color: $color-text-primary;
     line-height: $line-height-title;
+    margin-top: $base-value * 4;
+    margin-bottom: $base-value * 2;
   }
 
   h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
     text-align: center;
     font-weight: 900;
     line-height: $line-height-title;
-    margin-bottom: $base-value * 8;
+    margin-top: $base-value * 4;
+    margin-bottom: $base-value * 4;
   }
   h2 {
-    font-size: 4rem;
+    font-size: 2.5rem;
     line-height: $line-height-heading;
   }
   h3 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   h4 {
-    font-size: 2.5rem;
+    font-size: 1.75rem;
   }
   h5 {
     font-size: 1.5rem;
@@ -48,21 +59,24 @@ $color-light-white: #f9fafb;
   }
 
   p {
-    margin: $base-value * 2 0 $base-value * 4;
+    margin: $base-value * 2 0;
     line-height: $line-height-standard;
+    font-size: 1.1rem;
   }
 
   q {
   }
   a {
-    border-bottom: $base-value * 0.25 solid black;
+    border-bottom: $base-value * 0.25 solid $color-graphite;
   }
 
   blockquote {
-    background-color: gray;
+    margin: $base-value * 2 0;
+    background-color: $color-background-light;
     font-style: italic;
     padding: $base-value * 2;
-    border-radius: $base-value;
+    border-left: solid $color-accent $base-value / 2;
+    color: $color-text-accent;
 
     p {
       margin: $base-value;
@@ -74,9 +88,23 @@ $color-light-white: #f9fafb;
   }
 
   pre {
-    background-color: gray;
+    background-color: $color-background-dark;
     padding: $base-value * 2;
+    margin: $base-value * 2 0;
     border-radius: $base-value;
+    overflow: scroll;
+    color: $color-text-light;
+
+    ::selection {
+      color: $color-text-primary;
+      background-color: $color-bright-brick;
+    }
+  }
+
+  ul,
+  ol {
+    list-style-position: inside;
+    margin: $base-value * 2 0;
   }
 
   ul {
